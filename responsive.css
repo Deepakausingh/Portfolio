@@ -1,7 +1,14 @@
 /* ==============================
    Responsive CSS (Mobile/Tablet)
    ============================== */
-
+@font-face {
+  font-family: 'Cyberverse';
+  src: url('assets/fonts/Cyberverse.woff2') format('woff2'),
+       url('assets/fonts/Cyberverse.woff') format('woff'),
+       url('assets/fonts/Cyberverse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-size: 14px;
   line-height: 1.5;
