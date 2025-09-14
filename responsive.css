@@ -108,12 +108,14 @@ body::-webkit-scrollbar {
     justify-content: center;
     font-weight: 900;
     font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .logo-text {
     font-weight: 700;
     letter-spacing: 0.1em; /* Equivalent to tracking-widest */
     font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-icons {
