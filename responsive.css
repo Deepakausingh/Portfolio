@@ -1,12 +1,7 @@
 /* ==============================
    Responsive CSS (Mobile/Tablet)
    ============================== */
-@font-face {
-  font-family: 'Cyberverse';
-  src: url('assets/fonts/Cyberverse.woff2') format('woff2'),
-       url('assets/fonts/Cyberverse.woff') format('woff'),
-       url('assets/fonts/Cyberverse.ttf') format('truetype');
-}
+
 body {
   font-size: 14px;
   line-height: 1.5;
@@ -113,7 +108,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     font-weight: 900;
     font-size: 1.25rem;
-    font-family:'Cyberverse', sans-serif;
 }
 
 .logo-text {
