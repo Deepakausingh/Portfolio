@@ -118,6 +118,15 @@ body::-webkit-scrollbar {
     font-family: 'Inter', sans-serif;
 }
 
+.logo:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+
+
 .nav-icons {
     margin-right: 4rem;
     display: flex;
