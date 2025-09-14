@@ -1,0 +1,850 @@
+/* ==============================
+   Responsive CSS (Mobile/Tablet)
+   ============================== */
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#fullscreen-toggle {
+      position: fixed;
+      bottom: 20px;
+      background-color: transparent;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+      border: none;
+      border: 1px solid white;
+      padding: 8px;
+      cursor: pointer;
+      transition: width 0.3s ease, white 0.3s ease;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 35px;
+      z-index: 9999;
+      height: 35px;
+    }
+
+    #fullscreen-toggle:hover {
+      width: 160px;
+      background-color: white;
+      color: black;
+    }
+
+    #fullscreen-icon {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    #fullscreen-label {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    #fullscreen-toggle:hover #fullscreen-label {
+      opacity: 1;
+    }
+
+
+body::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem; /* Equivalent to p-10 */
+    box-sizing: border-box;
+}
+
+/* -------- Navbar -------- */
+.header {
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    transition: transform 0.9s ease-in-out;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.header.hidden {
+    transform: translateY(-100%); /* adjust based on your actual header/nav height */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Equivalent to space-x-3 */
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.logo-text {
+    font-weight: 700;
+    letter-spacing: 0.1em; /* Equivalent to tracking-widest */
+    font-size: 0.875rem;
+}
+
+.nav-icons {
+    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Equivalent to space-x-4 */
+}
+
+.social-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    padding: 3px;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid white;
+    text-decoration: none;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+    
+}
+
+.social-icon:hover {
+    width: 115px;
+    background-color: white;
+    color: black;
+}
+
+.social-icon i {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.button-text {
+    opacity: 0;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+    font-weight: 700;
+    letter-spacing: 0.1em; /* Equivalent to tracking-widest */
+font-size: 0.875rem;
+}
+
+.social-icon:hover .button-text {
+    opacity: 1;
+}
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem; /* Equivalent to space-y-1.5 */
+    border: none;
+    align-items: end;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.menu-btn-line-1 {
+    display: block;
+    width: 1.3rem;
+    height: 0.2rem;
+    background-color: white;
+}
+.menu-btn-line-2 {
+    display: block;
+    width: 0.95rem;
+    height: 0.2rem;
+    background-color: white;
+}
+.menu-btn-line-3 {
+    display: block;
+    width: 0.5rem;
+    height: 0.2rem;
+    background-color: white;
+}
+
+/* -------- Home Section -------- */
+
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.heading {
+    font-size: 5rem; /* Equivalent to text-7xl */
+    line-height: 1; /* Equivalent to leading-none */
+    font-weight: 900;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 5px;
+
+}
+.heading-2 {
+    font-size: 2rem; /* Equivalent to text-7xl */
+    line-height: 1; /* Equivalent to leading-none */
+    font-weight: 900;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.sub-heading {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white; /* Equivalent to text-gray-300 */
+    letter-spacing: 0.05em; /* Equivalent to tracking-wider */
+}
+.sub-heading-dash {
+    color: #6b7280; /* Equivalent to text-gray-500 */
+}
+
+
+
+/* -------- Section Titles (page, page-2, etc.) -------- */
+.intro {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 40px 10px;
+    position: relative;
+    
+}
+.page,
+.page-2,
+.page-3,
+.page-4,
+.page-5,
+.page-6 {
+  display: flex; /* Stack vertically */
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.page h1,
+.page-2 h1,
+.page-3 .number,
+.page-4 h1,
+.page-5 h1,
+.page-6 h1 {
+  font-size: 1.5rem;
+}
+
+.line,
+.linefour,
+.linesix{
+  width: 3rem;
+  height: 4px;
+  background-color: white;
+  margin: 0.3rem 0;
+  margin-left: 0.8rem;
+}
+
+.linefive,
+.linethree,
+.lineseven {
+  order: -1;
+   width: 3rem;
+  height: 4px;
+  background-color: white;
+  margin: 0.3rem 0;
+  margin-left: 0.8rem;
+}
+
+.heading-text{
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------- About Section -------- */
+.document {
+  text-align: start;
+  padding: 0.5rem;
+}
+.line-2{
+    width: 3.5rem;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 3rem;
+    text-align: start;
+    margin-left: 0.1rem;
+}
+
+.heading-hello {
+    font-size: 5rem;
+    font-weight: 1000;
+    color: white;
+    margin: 0;padding: 0;
+}
+
+.detail {
+  
+    font-size: 1rem;
+    color: white;
+    text-wrap: wrap;
+    line-height: 1.2;   
+}
+.detail p {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.My-Links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.My-Links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.My-Links a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.profile-photo-wrapper {
+  margin: 1rem;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+}
+
+/* -------- Education -------- */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.education-item-1
+ {
+    background-color: #343333a3;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 2px solid white;
+    text-align: start;
+    margin: 0.5rem;
+    margin-top: 0;
+}
+
+.education-item-2
+ {
+    background-color: #343333a3;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 2px solid white;
+    text-align: start;
+    margin: 0.5rem;
+    margin-bottom: 1rem;   margin-top: 0;
+}
+
+.education-item-1 h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+}
+.education-item-1 h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+}
+.education-item-1 h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem;
+    border: 1px solid white;
+    width: fit-content;
+}
+.linex {
+    width: 100%;
+    height: 0.4px;
+    background-color: white;
+    margin-top: 0.5rem;
+    text-align: start;
+    margin-left: 0.1rem;
+    margin-top: 1rem;
+}
+.lessons{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.1;
+    font-weight: 200;
+}
+
+h2 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+ul {
+    margin: 0;
+    padding-left: 60px;
+    margin-top: 0.5rem;
+}
+li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+    font-weight: 700;
+}
+.school{
+  margin-top: 0;
+}
+
+.lessons{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.1;
+    font-weight: 200;
+}
+
+.education-item-2 {
+    background-color: #343333a3;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 2px solid white;
+    text-align: start;  
+    margin-bottom: 1.5rem;
+}
+
+.education-item-2 h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1.2;
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.education-item-2 h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+}
+
+.education-item-2 h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem;
+    border: 1px solid white;
+    width: fit-content;
+}
+
+.school .lessons h2{
+  font-size: 1.2rem;
+}
+
+/* -------- Projects -------- */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.project-item {
+  background-color: #343333a3;
+  color: white;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  text-align: start;
+}
+
+.project-item .vid{
+    display: block;
+    border: 1px solid white;
+}
+
+.project-item .detail h3 {
+  margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #00ffc3;
+}
+.project-item .detail p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    font-weight: bold;
+}
+
+
+.project-item.large {
+  flex-direction: column;
+}
+
+.project-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vid iframe {
+  width: 100%;
+  height: 200px;
+}
+
+/* -------- Skills -------- */
+
+.skills{
+    margin-top: 5rem;
+}
+.skills-container {
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1rem;
+}
+.icon-wrapper {
+  height: 50px; /* Fixed space for icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 15px;
+}
+.skill-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 800;
+}
+
+
+
+.skill-item .icon {
+  font-size: 3rem; /* Increased from 2rem */
+  color: white;
+  margin: 1rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.skill-item {
+  text-align: center;
+  background-color: #343333a3;
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.language-list span {
+  background-color: #333;
+  padding: 5px 10px;
+  border: 1px solid white;
+  font-size: 0.85rem;
+  color: white;
+  white-space: nowrap;
+  font-weight: 700;
+  
+}
+
+.language-list span:hover {
+  background-color: white;
+  color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* -------- Experience -------- */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.experience-item {
+  text-align: center;
+  padding: 1rem;
+  background-color: #343333a3;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 2px solid white;
+  text-align: start;
+}
+.experience-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1;
+}
+.experience-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+}
+
+.experience-item h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem;
+    border: 1px solid white;
+    width: fit-content;
+}
+.formate{
+    padding: 5px;
+    border: 1px solid white;
+    width: fit-content;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 0.5rem;
+    
+
+}
+.linex1 {
+    width: 100%;
+    height: 0.4px;
+    background-color: white;
+    margin-top: 0.2rem;
+    text-align: start;
+}
+.experience-item .liney {
+    width: 100%;
+    height: 0.4px;
+    background-color: white;
+    margin-top: 0.5rem;
+    text-align: start;
+    margin-left: 0.1rem;
+}
+.experience-item p {
+    font-size: 1rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* -------- Achievements -------- */
+.achievement-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.achievement-item {
+    background-color: #343333a3;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 2px solid white;
+    text-align: start;
+}
+.achievement-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+}
+.achievement-item h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.achievement-item p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    width: fit-content;
+}
+
+/* -------- Gallery -------- */
+.gallery-container {
+  display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.gallery-heading {
+      text-align: center;
+      color: #ffcc00;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+        font-weight: 1000;
+        color: white;
+        margin-bottom: 0.2rem;
+        margin-top: 3rem;
+        letter-spacing: 0.1em;
+    }
+
+  .gallery-item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  overflow: hidden;       /* keeps zoomed image inside */
+  border: 1px solid white;
+  width: 300px;           /* fixed size */
+  height: auto;          /* fixed size */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* keeps image aspect nicely filled */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);   /* zoom inside */
+  filter: brightness(1.2);
+}
+
+.gallery-item:hover .gallery-overlay {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  transition: background 0.3s ease;
+}
+
+.gallery-overlay {
+  font-size: 0.9rem;
+}
+
+/* -------- Lightbox -------- */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox img {
+    width: 800px;
+    height: auto;
+    border: 1px solid white;
+  }
+
+/* -------- Scroll Progress -------- */
+.scroll-progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: white;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+    pointer-events: none;
+}

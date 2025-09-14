@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="mylogo.png" type="image/png">
+    <link id="main-style" rel="stylesheet" href="style.css">
+    <link id="responsive-style" rel="stylesheet" href="responsive.css" disabled>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Deepak's Portfolio</title>
+    <script>
+        function switchCSS() {
+        const main = document.getElementById("main-style");
+        const responsive = document.getElementById("responsive-style");
+
+        if (window.innerWidth <= 768) {
+            main.disabled = true;        // turn OFF style.css
+            responsive.disabled = false; // turn ON responsive.css
+        } else {
+            main.disabled = false;       // turn ON style.css
+            responsive.disabled = true;  // turn OFF responsive.css
+        }
+        }
+
+        // Run once when page loads
+        switchCSS();
+
+        // Run whenever window is resized
+        window.addEventListener("resize", switchCSS);
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <button id="fullscreen-toggle">
+            <i id="fullscreen-icon" class="fas fa-expand"></i>
+            <span id="fullscreen-label">Toggle Fullscreen</span>
+        </button>
+        <script>
+            const btn = document.getElementById('fullscreen-toggle');
+            const icon = document.getElementById('fullscreen-icon');
+            const label = document.getElementById('fullscreen-label');
+
+            function updateUI(isFullscreen) {
+            if (isFullscreen) {
+                icon.classList.replace('fa-expand', 'fa-compress');
+                label.textContent = 'Exit Fullscreen';
+            } else {
+                icon.classList.replace('fa-compress', 'fa-expand');
+                label.textContent = 'Enter Fullscreen';
+            }
+            }
+
+            btn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().then(() => {
+                updateUI(true);
+                }).catch((err) => {
+                alert(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                updateUI(false);
+                });
+            }
+            });
+
+            // Update on ESC or programmatic exit
+            document.addEventListener('fullscreenchange', () => {
+            updateUI(!!document.fullscreenElement);
+            });
+        </script>
+
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo-group">
+                    <div class="logo">D</div>
+                    <span class="logo-text"></span>
+                </div>
+
+                <div class="nav-icons">
+                    <a href="#" class="social-icon">
+                        <span><i class="fa-regular fa-envelope"></i></span>
+                        <span class="button-text">Email Me</span>  
+                    </a>
+                    <a href="#" class="social-icon">
+                        <span><i class="fa-brands fa-github"></i></span>
+                        <span class="button-text">GitHub</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <span><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="button-text">LinkedIn</span>
+                    </a>
+                    <button id="menu-toggle" class="menu-toggle">
+                        <span class="menu-btn-line-1"></span>
+                        <span class="menu-btn-line-2"></span>
+                        <span class="menu-btn-line-3"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        </script>
+
+
+        <div class="home">
+            <div class="content-wrapper">   
+                <div class="text-content">
+                    <h1 class="heading">Deepak</h1>
+                    <h2 class="heading-2">Kumar Singh</h2>
+                    <p class="sub-heading">
+                        <span class="sub-heading-dash">—</span>
+                        <span class="typing-text" id="typing"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const text = "This is me being creative.";
+            const typingElement = document.getElementById("typing");
+            let index = 0;
+            let deleting = false;
+
+            function typeEffect() {
+            if (!deleting && index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100); // typing speed
+            } 
+            else if (!deleting && index === text.length) {
+                deleting = true;
+                setTimeout(typeEffect, 1000); // wait 1s before deleting
+            } 
+            else if (deleting && index > 0) {
+                typingElement.textContent = text.substring(0, index - 1);
+                index--;
+                setTimeout(typeEffect, 50); // deleting speed
+            } 
+            else if (deleting && index === 0) {
+                deleting = false;
+                setTimeout(typeEffect, 1000); // wait 1s before typing again
+            }
+            }
+
+            typeEffect();
+        </script>
+        <div class="about">
+            
+        </div>
+    </div>
+    <!-- <div id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Home</a></li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">About</a></li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Work</a></li>
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Contact</a></li>
+        </ul>
+    </div> -->
+
+
+    <section class="intro" id="about">
+        <div class="page">
+            <h1>01</h1>
+            <span class="line"></span>
+            <p class="heading-text">ABOUT ME</p>
+        </div>
+        <div class="document">
+            <h1 class="heading-hello">Hello</h1>
+            <span class="line-2"></span>
+            <div class="detail">
+                <p>it's Me Deepak Kumar Singh – The Tech Alchemist
+                    <br>
+                    <br>
+                </p>
+                <p>Blending innovation with code, I’m a final-year Computer Science student driven by hands-on creativity and real-world problem-solving. <br> From building gesture-controlled 3D environments and AI-powered assistants to crafting interactive web platforms and real-time computer vision apps, I love turning ideas into impactful tech. Whether it's Python, Node.js, OpenCV, or full-stack development, I dive deep, debug hard, and deliver smarter.
+                    <br>I don’t just write code — I design intelligent systems that see, think, and respond.
+                </p>
+                <div class="My-Links">
+                    <a href="Resume.pdf"><i class="fa-regular fa-file-pdf"></i> RESUME</a>
+                    <a href="Cv.pdf"><i class="fa-regular fa-file-pdf"></i>CV</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="profile-photo-wrapper">
+            <div class="photo-background-layer"></div>
+            <img src="profile.jpg" alt="Profile Image" class="profile-photo">
+        </div>
+        <script>
+            window.addEventListener('scroll', () => {
+                const photoWrapper = document.querySelector('.profile-photo-wrapper');
+                const rect = photoWrapper.getBoundingClientRect();
+                const triggerHeight = window.innerHeight * 0.5; // 20% from top
+
+                if (rect.top < triggerHeight && rect.bottom > 0) {
+                    photoWrapper.classList.add('scrolled');
+                } else {
+                    photoWrapper.classList.remove('scrolled');
+                }
+            });
+        </script>        
+    </section>
+
+
+    <section class="education" id="education">
+        <div class="page-2">
+            <p class="heading-text">EDUCATION</p>
+            <span class="linethree"></span>
+            <h1>02</h1>
+        </div>
+
+        <div class="card-container">
+            <div class="education-item-1">
+                <h1>Bachelor of Engineering (B.E) in Computer Science</h1>
+                <h3>Dr. Bhimrao Ambedkar University | AGRA</h3>
+                <h4>August 2021 - July 2025</h4>
+                <div class="linex"></div>
+                <div class="lessons">
+                    <h2>Relevant Coursework:</h2>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Database Management Systems</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Networks</li>
+                        <li>Web Development</li>
+                        <li>Software Engineering</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="school">
+                <div class="education-item-2">
+                    <h2>Intermediate(10+2)</h2>
+                    <h3>Shandilya Public School | Varanasi</h3>
+                    <h4>Completed: 2020</h4>
+                    <div class="linex"></div>
+                    <div class="lessons">
+                        <h2>Relevant Coursework:</h2>
+                        <ul>
+                            <li>Physics</li>
+                            <li>Chemistry</li>
+                            <li>Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-item-2">
+                    <h2>High School</h2>
+                    <h3>Shandilya Public School | Varanasi</h3>
+                    <h4>Completed: 2018</h4>
+                    <div class="linex"></div>
+                    <div class="lessons">
+                        <h2>Relevant Coursework:</h2>
+                        <ul>
+                            <li>Science</li>
+                            <li>Mathematics</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="projects" id="projects">
+        <div class="page-3">
+            <h1 class="number">03</h1>
+            <span class="linefour"></span>
+            <p class="heading-text">PROJECTS</p>
+        </div>
+        <div class="project-container">
+            <div class="project-item large">
+                <div class="vid">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BSJa1UytM8w" 
+                        title="YouTube video player" frameborder="0" allowfullscreen>
+                    </iframe>
+
+                </div>
+                <div class="detail">
+                    <h3>Interactive 3D Model Hand Gesture & Clap Control</h3>
+                <p>This innovative 3D project combines real-time hand gesture control, object visualization, and interactive mode switching using claps. It was designed as a fully immersive, user-controlled application where 3D models (initially a cube or imported .glb/.gltf files) can be manipulated in a virtual environment.</p>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <div class="project-item">
+
+                    <h3>Project Title</h3>
+                    <p>Description of the project, technologies used, and your role.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Project Title</h3>
+                    <p>Description of the project, technologies used, and your role.</p>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills">
+        <div class="page-4">
+            <p class="heading-text">SKILLS</p>
+            <span class="linefive"></span>
+            <h1 class="number">04</h1>
+        </div>
+        <div class="skills-container">
+            <div class="skill-item">
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-terminal icon"></i>
+                </span>
+                <h2>Languages</h2>
+                <div class="language-list">
+                    <span><i class="fa-brands fa-python"></i>Python</span>
+                    <span><i class="fa-brands fa-java"></i>Java</span>
+                    <span>SQL</span>
+                    <span>C</span>
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span> 
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-code icon"></i>
+                </span>
+                <h2>Frameworks & Libraries</h2>
+                <div class="language-list">
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>Django</span>
+                    <span>Flask</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-database icon"></i>
+                </span>
+                <h2>Database</h2>
+                <div class="language-list">
+                    <span>MySQL</span>
+                    <span>PostgreSQL</span>
+                    <span>MongoDB</span>
+                    <span>SQLite</span>
+                    <span>Firebase</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-cloud icon"></i>
+                </span>
+                <h2>DevOps & Cloud</h2>
+                <div class="language-list">
+                    <span>Git</span>
+                    <span>Github</span>
+                    <span>Docker</span>
+                    <span>VS Code</span>
+                    <span>Google Cloud (GCP)</span>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                </span>
+                <h2>Testing & Tools</h2>
+                <div class="language-list">
+                    <span>Postman</span>
+                    <span>Pytest</span>
+                    <span>Jest</span>
+                    <span>FastAPI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experience" id="experience">
+        <div class="page-5">
+            <h1 class="number">05</h1>
+            <span class="linesix"></span>
+            <p class="heading-text">EXPERIENCE</p>
+        </div>
+        <div class="experience-container">
+            <div class="experience-item">
+                <h2>Software Developer Intern at Extion Infotech</h2>
+                <p class="formate">Remote</p>
+                <h3>August 2023 - october 2023</h3>
+                <div class="linex1"></div>
+                <p>Tools Developments and the Work on the automatics sytem designing</p>
+            </div>
+            <div class="experience-item">
+                <h2>Web Designing Intern</h2>
+                <p class="formate">Remote</p>
+                <h3>January 2022 - May 2023</h3>
+                <div class="linex1"></div>
+                <p>Developed multiple client websites using HTML, CSS, and JavaScript, ensuring responsive design and cross-browser compatibility.</p>
+            </div>
+        </div>
+    </section>
+    <section class="Achievement and certification">
+        <div class="page-6">
+            <p class="heading-text">ACHIEVEMENT <br>& CERTIFICATION</p>
+            <span class="lineseven"></span>
+            <h1 class="number">06</h1>
+        </div>
+        <div class="achievement-container">
+            <div class="achievement-item">
+                <h2>Google IT Support Professional Certificate</h2>
+                <h3>Issued by Google | Valid until: Lifetime</h3>
+                <div class="linex1"></div>
+                <p>Completed a comprehensive program covering troubleshooting, customer service, networking, operating systems, system administration, and security.</p>
+            </div>
+            <div class="achievement-item">
+                <h2>Introduction to Data Science</h2>
+                <h3>Issued by IBM | Valid until: Lifetime</h3>
+                <div class="linex1"></div>
+                <p>Learned the basics of data science, including data analysis, visualization, and machine learning using Python.</p>
+            </div>
+            <div class="achievement-item">
+                <h2>Web Development Bootcamp</h2>
+                <h3>Issued by Coursera | Valid until: Lifetime</h3>
+                <div class="linex1"></div>
+                <p>Gained hands-on experience in building responsive websites using HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React.</p>
+            </div>
+        </div>
+    </section>
+    <section class="Gallery&Creations">
+    <h1 class="gallery-heading">Gallery & Creations</h1>
+    
+    <!-- Top Row -->
+    <div class="gallery-container" id="galleryTop">
+        <div class="gallery-item"><img src="gallerypics/1.jpg"><div class="gallery-overlay">Creation 1</div></div>
+        <div class="gallery-item"><img src="gallerypics/2.jpg"><div class="gallery-overlay">Creation 2</div></div>
+        <div class="gallery-item"><img src="gallerypics/3.jpg"><div class="gallery-overlay">Creation 3</div></div>
+        <div class="gallery-item"><img src="gallerypics/4.jpg"><div class="gallery-overlay">Creation 4</div></div>
+        <div class="gallery-item"><img src="gallerypics/5.jpg"><div class="gallery-overlay">Creation 5</div></div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="gallery-container" id="galleryBottom">
+        <div class="gallery-item"><img src="gallerypics/6.jpg"><div class="gallery-overlay">Creation 6</div></div>
+        <div class="gallery-item"><img src="gallerypics/7.jpg"><div class="gallery-overlay">Creation 7</div></div>
+        <div class="gallery-item"><img src="gallerypics/8.jpg"><div class="gallery-overlay">Creation 8</div></div>
+        <div class="gallery-item"><img src="gallerypics/9.jpg"><div class="gallery-overlay">Creation 9</div></div>
+        <div class="gallery-item"><img src="gallerypics/10.jpg"><div class="gallery-overlay">Creation 10</div></div>
+    </div>
+    </section>
+
+    <!-- Fullscreen Lightbox -->
+    <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+    // Function to setup each gallery
+    function setupGallery(galleryId, direction = "left") {
+        const gallery = document.getElementById(galleryId);
+
+        // Duplicate items for infinite loop
+        const items = [...gallery.children];
+        items.forEach(item => {
+        gallery.appendChild(item.cloneNode(true));
+        });
+
+        // Drag & Touch Scroll
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        function startDrag(e) {
+        isDown = true;
+        startX = (e.pageX || e.touches[0].pageX) - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+        }
+
+        function endDrag() {
+        isDown = false;
+        }
+
+        function moveDrag(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = (e.pageX || e.touches[0].pageX) - gallery.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        gallery.scrollLeft = scrollLeft - walk;
+        }
+
+        gallery.addEventListener("mousedown", startDrag);
+        gallery.addEventListener("mouseup", endDrag);
+        gallery.addEventListener("mouseleave", endDrag);
+        gallery.addEventListener("mousemove", moveDrag);
+
+        gallery.addEventListener("touchstart", startDrag);
+        gallery.addEventListener("touchend", endDrag);
+        gallery.addEventListener("touchmove", moveDrag);
+
+        // Auto-scroll (opposite directions)
+        function autoScroll() {
+        gallery.scrollLeft += (direction === "left" ? 1 : -1);
+        if (gallery.scrollLeft <= 0 && direction === "right") {
+            gallery.scrollLeft = gallery.scrollWidth / 2;
+        }
+        if (gallery.scrollLeft >= gallery.scrollWidth / 2 && direction === "left") {
+            gallery.scrollLeft = 0;
+        }
+        }
+
+        setInterval(autoScroll, 10); // Adjust speed here
+    }
+
+    // Setup both galleries
+    setupGallery("galleryTop", "left");   // Top row moves left
+    setupGallery("galleryBottom", "right"); // Bottom row moves right
+
+    // Lightbox zoom
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+
+    galleryItems.forEach(img => {
+        img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+        lightbox.style.display = "none";
+        }
+    });
+    </script>
+    <div class="scroll-progress-bar"></div>
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            document.querySelector('.scroll-progress-bar').style.width = `${scrollPercent}%`;
+        });
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        });
+
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    function hideHeadingsOnMobile() {
+      const headings = document.querySelectorAll(
+        ".page h1, .page-2 h1, .page-3 .number, .page-4 h1, .page-5 h1, .page-6 h1"
+      );
+
+      if (window.innerWidth <= 1024) { 
+        // Mobile + Tablet
+        headings.forEach(el => {
+          el.style.display = "none";
+        });
+      } else {
+        // Desktop → show them back
+        headings.forEach(el => {
+          el.style.display = "";
+        });
+      }
+    }
+
+    // Run once on load
+    hideHeadingsOnMobile();
+
+    // Run again when resized
+    window.addEventListener("resize", hideHeadingsOnMobile);
+  });
+</script>
+
+
+
+</body>
+</html>
