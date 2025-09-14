@@ -6,8 +6,6 @@
   src: url('assets/fonts/Cyberverse.woff2') format('woff2'),
        url('assets/fonts/Cyberverse.woff') format('woff'),
        url('assets/fonts/Cyberverse.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 body {
   font-size: 14px;
@@ -115,6 +113,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     font-weight: 900;
     font-size: 1.25rem;
+    font-family:'Cyberverse', sans-serif;
 }
 
 .logo-text {
