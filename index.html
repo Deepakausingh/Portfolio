@@ -157,46 +157,56 @@
 
 
         <div class="home">
-            <div class="content-wrapper">   
-                <div class="text-content">
-                    <h1 class="heading">Deepak</h1>
-                    <h2 class="heading-2">Kumar Singh</h2>
-                    <p class="sub-heading">
-                        <span class="sub-heading-dash">—</span>
-                        <span class="typing-text" id="typing"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <script>
-            const text = "This is me being creative.";
-            const typingElement = document.getElementById("typing");
-            let index = 0;
-            let deleting = false;
+  <div class="content-wrapper">   
+    <div class="text-content">
+      <h1 class="heading">Deepak</h1>
+      <h2 class="heading-2">Kumar Singh</h2>
+      <p class="sub-heading">
+        <span class="sub-heading-dash">—</span>
+        <span class="typing-text" id="typing"></span>
+      </p>
+    </div>
+  </div>
+</div>
 
-            function typeEffect() {
-            if (!deleting && index < text.length) {
-                typingElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeEffect, 100); // typing speed
-            } 
-            else if (!deleting && index === text.length) {
-                deleting = true;
-                setTimeout(typeEffect, 1000); // wait 1s before deleting
-            } 
-            else if (deleting && index > 0) {
-                typingElement.textContent = text.substring(0, index - 1);
-                index--;
-                setTimeout(typeEffect, 50); // deleting speed
-            } 
-            else if (deleting && index === 0) {
-                deleting = false;
-                setTimeout(typeEffect, 1000); // wait 1s before typing again
-            }
-            }
+<script>
+  const texts = [
+    "This is me being creative.",
+    "Welcome to my website"
+  ];
+  
+  const typingElement = document.getElementById("typing");
+  let textIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
 
-            typeEffect();
-        </script>
+  function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (!deleting && charIndex < currentText.length) {
+      typingElement.textContent += currentText.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 100); // typing speed
+    } 
+    else if (!deleting && charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1000); // wait before deleting
+    } 
+    else if (deleting && charIndex > 0) {
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typeEffect, 50); // deleting speed
+    } 
+    else if (deleting && charIndex === 0) {
+      deleting = false;
+      textIndex = (textIndex + 1) % texts.length; // move to next text
+      setTimeout(typeEffect, 1000); // wait before typing again
+    }
+  }
+
+  typeEffect();
+</script>
+
         <div class="about">
             
         </div>
