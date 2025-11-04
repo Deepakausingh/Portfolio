@@ -1,16 +1,48 @@
-# React + Vite
+# 🌐 React + Vite Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **personal portfolio website** built with **React** and **Vite**, showcasing projects, skills, and contact information with smooth animations and a responsive design.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://portfolio-clcy.vercel.app/](https://portfolio-clcy.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ Built with **Vite** for fast development and optimized builds  
+- 🎨 Styled using **Tailwind CSS** for a modern, responsive design  
+- 🔥 Supports **Hot Module Replacement (HMR)** for instant updates  
+- 💡 Interactive animations and smooth transitions  
+- 📱 Fully responsive across devices  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React** – Frontend framework  
+- **Vite** – Fast bundler and dev server  
+- **Tailwind CSS** – Styling and layout  
+- **Lucide React / React Icons** – Icons  
+- **Framer Motion** – Animations  
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate to project directory
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
