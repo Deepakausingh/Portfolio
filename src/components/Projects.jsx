@@ -94,7 +94,7 @@ export default function Projects() {
             </div>
 
             {/* Project Content */}
-            <div className="p-6 relative z-10 flex flex-col justify-between h-[240px] text-center">
+            <div className="p-4 relative z-10 flex flex-col justify-between h-[240px] text-center">
               <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-1">
                   {project.title}
