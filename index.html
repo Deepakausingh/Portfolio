@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <title>Deepak's Portfolio</title>
+    <style>
+      /* Cross-browser hide scrollbar but keep scrolling */
+html, body, #root, #app {
+  height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge (legacy) */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* WebKit browsers (Chrome, Safari, new Edge) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar,
+#app::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+    </style>
+
+    <!-- ✅ Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neon: {
+                cyan: "#22d3ee",
+                purple: "#8b5cf6",
+                pink: "#fb7185",
+              },
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+            animation: {
+              float: "float 4s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- ✅ Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans scroll-smooth">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
