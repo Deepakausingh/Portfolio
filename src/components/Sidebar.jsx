@@ -34,7 +34,7 @@ export default function Sidebar({ visible }) {
         <a href="https://www.linkedin.com/in/deepakdan/" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
           <FaLinkedinIn />
         </a>
-        <a href="#" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
+        <a href="" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
           <FaInstagram />
         </a>
       </div>

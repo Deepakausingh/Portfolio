@@ -11,7 +11,7 @@ export default function Projects() {
   const projects = [
     {
       image: soapwebsite,
-      title: "Handmade Soap Website [RustqueMud]",
+      title: "Handmade Soap Website",
       description:
         "E-commerce site for handmade soaps with product showcases, shopping cart, and secure checkout.",
       tech: ["React", "Node.js"],
