@@ -28,13 +28,13 @@ export default function Sidebar({ visible }) {
 
       {/* Social Icons */}
       <div className="flex flex-col items-center mt-auto mb-4 space-y-4">
-        <a href="#" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
+        <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]">
           <FaEnvelope />
         </a>
-        <a href="https://www.linkedin.com/in/deepakdan/" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
+        <a href="https://www.linkedin.com/in/deepakdan/" className="text-gray-400 hover:text-cyan-400 transition-colors hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]">
           <FaLinkedinIn />
         </a>
-        <a href="" className="text-gray-400 hover:text-[#3fa9f5] transition-colors">
+        <a href="" className="text-gray-400 hover:text-cyan-400 transition-colors hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]">
           <FaInstagram />
         </a>
       </div>

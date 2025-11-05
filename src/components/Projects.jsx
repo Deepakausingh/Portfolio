@@ -121,7 +121,7 @@ export default function Projects() {
                 <a
                   href={project.github}
                   className="relative px-5 py-2 text-xs font-semibold text-white border border-cyan-400 rounded-full 
-                             overflow-hidden group/button transition-all duration-500 hover:text-black"
+                             overflow-hidden group/button transition-all duration-500 hover:text-black hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]"
                 >
                   <span className="absolute inset-0 bg-cyan-400 scale-x-0 group-hover/button:scale-x-100 origin-left transition-transform duration-500 ease-in-out"></span>
                   <span className="relative z-10 flex items-center gap-2">
@@ -132,7 +132,7 @@ export default function Projects() {
                 <a
                   href={project.live}
                   className="relative px-5 py-2 text-xs font-semibold text-white border border-cyan-400 rounded-full 
-                             overflow-hidden group/button transition-all duration-500 hover:text-black"
+                             overflow-hidden group/button transition-all duration-500 hover:text-black hover:shadow-[0_0_40px_rgba(63,169,245,0.4)]"
                 >
                   <span className="absolute inset-0 bg-cyan-400 scale-x-0 group-hover/button:scale-x-100 origin-left transition-transform duration-500 ease-in-out"></span>
                   <span className="relative z-10 flex items-center gap-2">

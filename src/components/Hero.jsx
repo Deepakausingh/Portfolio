@@ -125,7 +125,8 @@ export default function Hero() {
             {/* Button */}
             <a
               href="#projects"
-              className="relative inline-block border border-cyan-400 text-white px-8 py-3 rounded-full text-sm overflow-hidden group hover:text-black font-bold"
+              className="relative inline-block border border-cyan-400 text-white px-8 py-3 rounded-full text-sm overflow-hidden group hover:text-black font-bold hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]
+                style={{ scroll-behavior: smooth; }}"
             >
               <span className="relative z-10 flex items-center justify-center md:justify-start gap-2">
                 view my work <FaArrowRight />

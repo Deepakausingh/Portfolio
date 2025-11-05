@@ -75,7 +75,7 @@ export default function Navbar() {
             onClick={() => scrollToSection(section)}
             className={`w-2 h-2 rotate-45 transition-all duration-300 border ${
               activeSection === section
-                ? "bg-[#3fa9f5] border-[#3fa9f5] scale-125 shadow-[0_0_6px_#3fa9f5]"
+                ? "bg-cyan-400 border-[#3fa9f5] scale-150 shadow-[0_0_6px_#3fa9f5]"
                 : "border-gray-600 hover:border-cyan-400 hover:scale-110"
             }`}
           ></button>
