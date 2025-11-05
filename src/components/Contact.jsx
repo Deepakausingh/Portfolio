@@ -121,26 +121,26 @@ export default function Contact() {
 
           <div className="flex space-x-4 mt-8">
             <a
-              href="https://github.com/"
-              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all"
+              href="https://github.com/Deepakausingh"
+              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all hover:shadow-[0_0_40px_rgba(63,169,245,0.4)]"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/"
-              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all"
+              href="https://linkedin.com/in/deepakdan/"
+              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all hover:shadow-[0_0_40px_rgba(63,169,245,0.4)]"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://twitter.com/"
-              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all"
+              href="https://x.com/deepakausingh?t=FwuQz7qaPJeAMrqDOGjbBQ&s=09"
+              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all hover:shadow-[0_0_40px_rgba(63,169,245,0.4)]"
             >
               <Twitter className="w-6 h-6" />
             </a>
             <a
-              href="https://instagram.com/"
-              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all"
+              href="https://www.instagram.com/deepak_au_001?igsh=MWhnejNjZm1jcHJwMw=="
+              className="p-2 border border-cyan-400/50 hover:bg-cyan-400 hover:text-black transition-all hover:shadow-[0_0_40px_rgba(63,169,245,0.4)]"
             >
               <Instagram className="w-6 h-6" />
             </a>
