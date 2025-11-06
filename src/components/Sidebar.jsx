@@ -1,7 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 // 👇 Import your logo image
-import logo from "../assets/logo.png"; // <-- change the file name & path as needed
+import logo from "../assets/logo.webp"; // <-- change the file name & path as needed
 
 export default function Sidebar({ visible }) {
   return (

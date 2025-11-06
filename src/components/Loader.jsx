@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png"; // 🖼️ Replace with your logo path
+import logo from "../assets/logo.webp"; // 🖼️ Replace with your logo path
 
 export default function Loader({ onFinish }) {
   const [progress, setProgress] = useState(0);

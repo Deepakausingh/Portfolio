@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import profileImg from "../assets/profile2.jpg";
+import profileImg from "../assets/profile.webp";
 
 export default function Hero() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -138,7 +138,7 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="relative hidden md:flex justify-center items-center mt-10 md:mt-0">
             <div
-              className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-center bg-cover relative overflow-hidden rounded-full md:rounded-none"
+              className="w-[250px] h-[250px] md:w-[500px] md:h-[600px] bg-center bg-cover relative overflow-hidden rounded-full md:rounded-none"
               style={{ backgroundImage: `url(${profileImg})` }}
             ></div>
           </div>

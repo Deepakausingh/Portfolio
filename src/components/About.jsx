@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../assets/profile.jpg"; // <-- your image
+import profileImage from "../assets/profile.webp"; // <-- your image
 import resumeFile from "../assets/resume.pdf"; // <-- add resume file
 import cvFile from "../assets/cv.pdf"; // <-- add CV file
 

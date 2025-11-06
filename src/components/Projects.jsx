@@ -1,10 +1,10 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
-import portfolio from "../assets/portfolio.png";
-import aiDisease from "../assets/aidesease.png";
-import placement from "../assets/placement.png";
-import activityApp from "../assets/activity.png";
-import soapwebsite from "../assets/soapweb.png";
+import portfolio from "../assets/portfolio.webp";
+import aiDisease from "../assets/aidesease.webp";
+import placement from "../assets/placement.webp";
+import activityApp from "../assets/activity.webp";
+import soapwebsite from "../assets/soapweb.webp";
 
 
 export default function Projects() {
@@ -47,7 +47,7 @@ export default function Projects() {
     },
     {
       image: activityApp,
-      title: "Human Activity Recognition App",
+      title: "Activity Recognition App",
       description:
         "Mobile app using sensor data and ML models to classify user activities and provide real-time movement insights.",
       tech: ["Keras", "Flutter", "Firebase"],
