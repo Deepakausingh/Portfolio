@@ -27,7 +27,7 @@ export default function Sidebar({ visible }) {
       </div>
 
       {/* Social Icons */}
-      <div className="flex flex-col items-center mt-auto mb-4 space-y-4">
+      <div className="flex flex-col items-center mt-auto mb-8 sm:mb-4 space-y-4">
         <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors hover:shadow-[0_0_40px_rgba(63,169,245,0.6)]">
           <FaEnvelope />
         </a>
