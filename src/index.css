@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: var(--bg-dark);
   font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 @supports (height: 100dvh) {
@@ -24,6 +25,7 @@ body {
 
 /* Cross-browser hide scrollbar but keep scrolling */
 html, body, #root, #app {
+  background-color: var(--bg-dark);
   height: calc(var(--vh) * 1);
   margin: 0;
   padding: 0;
