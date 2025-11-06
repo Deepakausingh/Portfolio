@@ -39,6 +39,15 @@ export default function App() {
     return <Loader onFinish={() => setShowLoader(false)} />;
   }
 
+  useEffect(() => {
+  const setVh = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+  };
+  setVh();
+  window.addEventListener('resize', setVh);
+  return () => window.removeEventListener('resize', setVh);
+}, []);
+
   return (
     <div>
       <Navbar />
