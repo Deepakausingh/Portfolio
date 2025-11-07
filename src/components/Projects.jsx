@@ -25,7 +25,7 @@ export default function Projects() {
         "A personal portfolio built using React and Tailwind CSS showcasing my projects, skills, and contact information with modern animations and responsive design.",
       tech: ["React", "Tailwind CSS"],
       github: "#",
-      live: "#",
+      live: "",
     },
     {
       image: aiDisease,

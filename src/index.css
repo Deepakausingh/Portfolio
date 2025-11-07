@@ -8,6 +8,7 @@
 body {
   background-color: var(--bg-dark);
   font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
 }
 @supports (height: 100dvh) {
   :root {

@@ -43,9 +43,39 @@
 html, body, #root, #app {
   height: 100%;
   overflow: auto;
+  cursor: url("/cursor.png"), auto;
   -ms-overflow-style: none;  /* IE and Edge (legacy) */
   scrollbar-width: none;     /* Firefox */
 }
+
+/* Normal state */
+body {
+  cursor: url("/cursor.png"), auto;
+}
+
+/* Hover links */
+a:hover {
+  cursor: url("/Hand.png"), pointer;
+}
+
+/* Typing */
+input, textarea {
+  cursor: url("/IBeam.png"), text;
+}
+button {
+  cursor: url("/Hand.cur"), pointer;
+}
+
+/* Dragging or moving */
+.move {
+  cursor: url("/SizeNS.png"), move;
+}
+
+/* Crosshair / selection */
+.crosshair {
+  cursor: url("/cursor-cross.cur"), crosshair;
+}
+
 
 /* WebKit browsers (Chrome, Safari, new Edge) */
 html::-webkit-scrollbar,
