@@ -5,7 +5,7 @@ import aiDisease from "../assets/aidesease.webp";
 import placement from "../assets/placement.webp";
 import activityApp from "../assets/activity.webp";
 import soapwebsite from "../assets/soapweb.webp";
-import leetcode from "../assets/leetcode.png";
+import leetcode from "../assets/Leetcode.png";
 
 
 export default function Projects() {
