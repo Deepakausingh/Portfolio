@@ -52,7 +52,7 @@ export default function Projects() {
       description:
         "A full-stack college placement web app connecting students and recruiters with real-time job updates and resume management.",
       tech: ["React", "Node.js", "MongoDB"],
-      github: "#",
+      github: "https://github.com/Deepakausingh/leetcode-tracker",
       live: "https://web-career-portal-5.onrender.com/",
     },
     {
