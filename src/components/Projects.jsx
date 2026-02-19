@@ -16,7 +16,7 @@ export default function Projects() {
       description:
         "A Real time LeetCode activity tracker that fetches user data and visualizes problem-solving trends with interactive charts and insights.",
       tech: ["React", "Node.js"],
-      github: "#",
+      github: "https://github.com/Deepakausingh/leetcode-tracker",
       live: "https://leetcode-tracker-4wj6.vercel.app/",
     },
     {
@@ -52,7 +52,7 @@ export default function Projects() {
       description:
         "A full-stack college placement web app connecting students and recruiters with real-time job updates and resume management.",
       tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/Deepakausingh/leetcode-tracker",
+      github: "#",
       live: "https://web-career-portal-5.onrender.com/",
     },
     {
