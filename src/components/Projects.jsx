@@ -5,10 +5,20 @@ import aiDisease from "../assets/aidesease.webp";
 import placement from "../assets/placement.webp";
 import activityApp from "../assets/activity.webp";
 import soapwebsite from "../assets/soapweb.webp";
+import leetcode from "../assets/leetcode.png";
 
 
 export default function Projects() {
   const projects = [
+    {
+      image: leetcode,
+      title: "LeetCode Activity Tracker",
+      description:
+        "A Real time LeetCode activity tracker that fetches user data and visualizes problem-solving trends with interactive charts and insights.",
+      tech: ["React", "Node.js"],
+      github: "#",
+      live: "https://leetcode-tracker-4wj6.vercel.app/",
+    },
     {
       image: soapwebsite,
       title: "Handmade Soap Website",

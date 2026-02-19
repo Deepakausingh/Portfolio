@@ -21,11 +21,11 @@ export default function Experience() {
     },
     {
       icon: <Brain className="w-10 h-10 text-cyan-400 mb-4" />,
-      role: "AI & ML Research Assistant",
-      company: "Dr. B.R. Ambedkar University | Agra, India",
-      year: "Jul 2023 – Dec 2023",
+      role: "Software Engineer Intern",
+      company: "Extion Infoteh | Agra, India",
+      year: "June 2024 – Aug 2024",
       description:
-        "Collaborated on an AI-based image recognition model using TensorFlow. Developed a U-Net segmentation prototype for medical imaging analysis.",
+        "Hands ON experience with the full software development lifecycle, from requirements gathering to deployment.",
     },
     {
       icon: <Briefcase className="w-10 h-10 text-cyan-400 mb-4" />,
